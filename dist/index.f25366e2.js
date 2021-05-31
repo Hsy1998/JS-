@@ -1,0 +1,2 @@
+!function(){let t=dom.create("<div>我是test的兄弟</div>"),e=(dom.create("<div><strong>我是div3的爹</strong></div>"),dom.create("<div>我是你儿子</div>"));dom.after(test,t),dom.append(test,e),dom.attr(test,"title","Hi,I m H");const o=dom.attr(test,"title");console.log(o);dom.text(test,"你好，这是新的内容");console.log(dom.text(test)),dom.style(test,{border:"1px solid red",color:"#008c8c"}),dom.style(test,"color","red"),dom.class.add(test,"red"),dom.class.add(test,"blue"),dom.class.remove(test,"blue"),console.log(dom.class.contains(test,"blue"))}();
+//# sourceMappingURL=index.f25366e2.js.map
