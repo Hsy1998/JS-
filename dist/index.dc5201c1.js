@@ -1,0 +1,2 @@
+!function(){let t=dom.create("<div>我是test的兄弟</div>"),o=dom.create("<div><strong>我是div3的爹</strong></div>"),e=dom.create("<div>我是你儿子</div>");dom.after(test,t),dom.append(test,e),dom.wrap(e,o);const d=dom.empty(o);console.log(d),dom.attr(test,"title","Hi,I m H");const s=dom.attr(test,"title");console.log(s);const m=dom.text(test,"你好，这是新的内容");dom.text(m),console.log(m),dom.style(test,{border:"1px solid red"})}();
+//# sourceMappingURL=index.dc5201c1.js.map
