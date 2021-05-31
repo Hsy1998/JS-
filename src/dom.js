@@ -61,9 +61,31 @@ window.dom = {
       return node.innerHTML
     }
   },
-  style(node, object) {
-    for (let key in object) {
-      node.style[key] = object[key]
+  style(node, name, value) { // 增删改查样式
+    if (arguments.length === 3) {
+      // dom.style(div,'color','red')
+      node.style[name] = value
+    } else if (arguments.length === 2) {
+      if (typeof name === 'string') {
+        // dom.style(div,'color')
+        return node.style[name]
+      } else if (name instanceof Object) {
+        // dom.style(div,'color:red')
+        for (let key in name) {
+          node.style[key] = name[key]
+        }
+      }
+    }
+  },
+  class: {
+    add(node, className) { // 增加className
+      node.classList.add(className)
+    },
+    remove(node, className) { // 删除className
+      node.classList.remove(className)
+    },
+    contains(node, className) { // 判断元素是否有某个className
+      return node.classList.contains(className)
     }
   }
 }
